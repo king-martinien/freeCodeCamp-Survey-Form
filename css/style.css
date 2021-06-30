@@ -182,7 +182,7 @@ main {
 }
 
 .gender-field input {
-    opacity: 0;
+    visibility: hidden;
     width: 1px;
     height: 1px;
 }
@@ -245,6 +245,7 @@ main {
 
 .input input:checked ~ .box svg {
     transform: scale(1);
+    fill: var(--white-color);
 }
 
 .input input:focus ~ .box {
