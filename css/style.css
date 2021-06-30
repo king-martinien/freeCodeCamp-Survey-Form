@@ -108,6 +108,8 @@ main {
      height: 38px;
      border: none;
      cursor: pointer;
+     border-radius: 4px;
+     margin: 12px 0;
  }
 
  .dropdown {
@@ -135,18 +137,19 @@ main {
 }
 
 .gender {
-    /* border: 2px solid red; */
     padding-left: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .gender-field {
     position: relative;
     display: flex;
+    align-items: flex-start;
 }
 
 .gender-field label {
     margin-left: 18px;
-    /* border: 2px solid blue; */
     color: var(--text-light-color);
     font-weight: 400;
 }
@@ -179,8 +182,9 @@ main {
 }
 
 .gender-field input {
-    /* opacity: 0; */
-    display: none;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
 }
 
 .gender-field input[type=radio]:checked ~ .radio:after{
@@ -203,7 +207,8 @@ main {
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-top: 2px;
+    margin-top: 3px;
+    margin-left: 10px;
 }
 
 .language-field .input {
@@ -213,16 +218,45 @@ main {
 }
 
 .input input {
-    display: none;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
 }
 
 .input .box {
-    display: block;
-    width: 15px;
-    height: 15px;
+    /* display: block; */
+    width: 16px;
+    height: 16px;
     border-radius: 3px;
     border: 1px solid var(--text-light-color);  
+    cursor: pointer;
+    background-color: transparent;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in;
 }
+
+.input input:checked ~ .box {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.input input:checked ~ .box svg {
+    transform: scale(1);
+}
+
+.input input:focus ~ .box {
+    border-color: var(--primary-color);
+}
+
+.box svg {
+    fill: var(--white-color);
+    transform: scale(0);
+    transition: transform 0.2s ease;
+}
+
 
 .box, .language-field label {
     position: absolute;
@@ -230,7 +264,7 @@ main {
     transform: translateY(-50%);
 }
 
-.language-field label {
+.language-field label:not(.box) {
     color: var(--text-light-color);
     font-weight: 400;
     left: 24px;
