@@ -22,10 +22,6 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; */
 }
 
 main {
@@ -145,7 +141,6 @@ main {
 
 .gender-field {
     position: relative;
-    /* border: 2px solid red; */
     display: flex;
 }
 
@@ -184,8 +179,8 @@ main {
 }
 
 .gender-field input {
-    opacity: 0;
-    width: 0;
+    /* opacity: 0; */
+    display: none;
 }
 
 .gender-field input[type=radio]:checked ~ .radio:after{
@@ -204,13 +199,49 @@ main {
     margin-bottom: 8px;
 }
 
+.language-field {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 2px;
+}
+
+.language-field .input {
+    position: relative;
+    min-height: 12px;
+    width: 100%;
+}
+
+.input input {
+    display: none;
+}
+
+.input .box {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    border: 1px solid var(--text-light-color);  
+}
+
+.box, .language-field label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .language-field label {
     color: var(--text-light-color);
     font-weight: 400;
+    left: 24px;
 }
 
 @media screen and (max-width: 340px) {
     
+    body {
+        background-attachment: initial;
+    }
+
     .form-container {
         width: 90%;
         padding: 32px 12px;
