@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ============== Google Inter Font ============== -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap" rel="stylesheet">
+    <title>Survey-Form</title>
+    <!-- ================= Style ================= -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =============== Main ============== -->
+    <main id="main" role="main">
+
+        <!-- =============== Form Coontainer ============ -->
+        <div class="form-container">
+
+            <!-- =========== Form Header ============= -->
+            <header class="form-header">
+
+                <h1 id="title">Student Admission Survey</h1>
+                <p id="description">
+                    please enter all your information to validate your admission
+                </p>
+
+            </header>
+
+            <!-- ================ Survey-form ============== -->
+            <form action="#" id="survey-form">
+
+                <!-- ============== field Name ============= -->
+                <div class="field">
+
+                    <label for="name" id="name-label" class="label-required">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required autocomplete="off">
+
+                </div>
+
+                <!-- ============== field Email ============= -->
+                <div class="field">
+
+                    <label for="email" id="email-label" class="label-required">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your Email" required
+                        autocomplete="off">
+
+                </div>
+
+                <!-- ============== field Age ============= -->
+                <div class="field">
+
+                    <label for="age" id="number-label" class="label-required">Age (between 18 and 29 years old)</label>
+                    <input type="number" name="number" id="number" placeholder="Enter your Age" required
+                        autocomplete="off" min="18" max="29">
+
+                </div>
+
+                <!-- ========== Dropdown field =================== -->
+                <div class="field">
+                    <label for="">Select your profession</label>
+                    <div class="dropdown">
+                        <select name="profession" id="dropdown">
+                            <option id="ui-ux" value="ui-ux designer">UI/UX Designer</option>
+                            <option id="frontend" value="frontend">Frontend Developer</option>
+                            <option id="backend" value="backend">Backend Developper</option>
+                            <option id="fullstack" value="fullstack">FullStack Developer</option>
+                        </select>
+                        <div class="icon"></div>
+                    </div>
+
+                </div>
+
+                <!-- ============== field Radio ============= -->
+                <div class="field">
+
+                    <label for="" id="gender-label">Select your Gender</label>
+
+                    <div class="gender">
+                        <div class="gender-field">
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male" class="radio"></label>
+                            <label for="male" id="male">Male</label>
+                        </div>
+    
+                        <div class="gender-field">
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female" class="radio"></label>
+                            <label for="female" id="female">Female</label>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                <!-- ============= Checkboxes field ================ -->
+                <div class="field">
+
+                    <label for="languages" id="languages">Select your Favotite(s) Language(s)</label>
+
+                    <div class="language-field">
+                        <input type="checkbox" name="java" id="java" value="java">
+                        <label for="java">JAVA</label>
+                    </div>
+
+                    <div class="language-field">
+                        <input type="checkbox" name="javascript" id="javascript" value="javascript">
+                        <label for="javascript">JAVASCRIPT</label>
+                    </div>
+
+                    <div class="language-field">
+                        <input type="checkbox" name="python" id="python" value="python">
+                        <label for="python">PYTHON</label>
+                    </div>
+
+                    <div class="language-field">
+                        <input type="checkbox" name="c-sharp" id="c-sharp" value="c-sharp">
+                        <label for="c-sharp">C-SHARP</label>
+                    </div>
+
+                </div>
+
+                <!-- ============== field Comments ============= -->
+                <div class="field">
+
+                    <label for="comments" id="comments-label">Any comments or suggestions?</label>
+                    <textarea name="comments" id="comments" cols="30" rows="6"
+                        placeholder="Your comments goes here"></textarea>
+
+                </div>
+
+                <!-- ============ Submit button ============ -->
+                <input type="submit" id="submit" value="Submit">
+
+            </form>
+        </div>
+
+    </main>
+
+
+    <!-- ================= script test ====================== -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
